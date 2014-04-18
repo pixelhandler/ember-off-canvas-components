@@ -40,6 +40,29 @@ Step 6 (optional): Make a change to `lib/components/ella-sample-component` in
 your text editor of choice and watch the tests *and* the example page reload
 automatically
 
+Typical Usage
+==========================================
+
+To begin development and testing of your component:
+
+```
+$ testem
+```
+
+With the testing server running, [view the example component][example] to see
+your component in a browser.
+
+Your tests and component page will reload automatically when you save changes
+to your code.
+
+To prepare your module for distribution:
+
+```
+$ grunt dist
+```
+
+That's all there is to it. Pretty sweet, huh?
+
 Project Goals (or Wait. What? Why?)
 ==========================================
 
