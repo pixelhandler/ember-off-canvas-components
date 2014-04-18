@@ -1,0 +1,10 @@
+@import 'variables';
+
+ella-sample {
+  color: $inactive_color;
+
+  &.activated {
+    color: $active_color;
+    font-weight: bold;
+  }
+}

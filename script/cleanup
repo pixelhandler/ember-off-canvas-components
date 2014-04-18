@@ -1,0 +1,6 @@
+#!/bin/sh
+BROC_PID=`cat tmp/BROC_PID.txt`
+kill $BROC_PID
+rm tmp/BROC_PID.txt
+rm tmp/broccoli.log
+echo "Goodbye"
