@@ -1,4 +1,5 @@
 #!/bin/sh
+mkdir -p tmp
 BROCCOLI_ENV=development broccoli serve > tmp/broccoli.log 2>&1 & BROC_PID=$!
 echo $BROC_PID >> tmp/BROC_PID.txt
 
