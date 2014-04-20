@@ -18,6 +18,6 @@
   "parallel": 4,
   "launch_in_dev": ["PhantomJS", "Safari", "Chrome"],
   "launch_in_ci": ["PhantomJS", "Chrome", "Firefox", "Safari", "IE7", "IE8", "IE9"],
-  "on_start": "script/develop",
-  "on_exit": "script/cleanup"
+  "on_start": "script/testem_on_start",
+  "on_exit": "script/testem_on_exit"
 }
