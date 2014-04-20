@@ -31,7 +31,7 @@ $ npm install
 Step 4: Start your test and development server
 
 ```
-$ testem
+$ ./testem
 ```
 
 Step 5: With the testing server now running, [view the example component][example]
@@ -46,7 +46,7 @@ Typical Usage
 To begin development and testing of your component:
 
 ```
-$ testem
+$ ./testem
 ```
 
 With the testing server running, [view the example component][example] to see
@@ -58,7 +58,7 @@ to your code.
 To prepare your module for distribution:
 
 ```
-$ grunt dist
+$ ./grunt dist
 ```
 
 That's all there is to it. Pretty sweet, huh?
@@ -88,14 +88,14 @@ desired by the Ember community. I want to use the latest build and testing tools
 to make developing components as easy as possible for myself and anyone who
 feels they can contribute.
 
-To me, running a single command, `testem`, to begin development work is the
+To me, running a single command, `./testem`, to begin development work is the
 ideal scenario. In this one command:
 
 * A Broccoli server will start and rebuild when it detects code changes
 * Test'em will run tests and automatically re-run the tests each time Broccoli builds
 * The component becomes available at http://localhost:7357/examples/index.html and will automatically reload each time Broccoli builds
 
-Similarly, one command, `grunt dist`, will build and test the component for
+Similarly, one command, `./grunt dist`, will build and test the component for
 distribution. In this one command:
 
 * Broccoli will build the component for testing
