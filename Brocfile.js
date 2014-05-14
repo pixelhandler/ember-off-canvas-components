@@ -58,4 +58,4 @@ var outputJs = plugins.broccoliDistEs6Module(pkg, {
   }
 });
 
-module.exports = plugins.broccoliMergeTrees(outputJs);
+module.exports = outputJs;
