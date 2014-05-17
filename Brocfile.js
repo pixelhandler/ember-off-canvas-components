@@ -19,7 +19,7 @@ var camelize = function(str) {
 };
 
 require('matchdep').filterDev('broccoli-*').forEach(function(p, idx) {
-  if (['broccoli-cli'].indexOf(p) < 0) {
+  if (['broccoli-cli', 'broccoli-timepiece'].indexOf(p) < 0) {
     plugins[camelize(p)] = require(p);
   }
 });
@@ -40,7 +40,12 @@ styles = plugins.broccoliStaticCompiler(styles, {
   srcDir: '/',
   destDir: '/styles'
 });
-styles = plugins.broccoliSass([styles], 'styles/main.scss', 'templates/main-css.hbs');
+styles = plugins.broccoliSass([styles], 'styles/main.scss', 'templates/main-css.css');
+styles = plugins.broccoliAutoprefixer(styles, {});
+styles = plugins.broccoliFileMover(styles, {
+  srcFile: 'templates/main-css.css',
+  destFile: 'templates/main-css.hbs'
+});
 
 sourceTrees = [lib, styles];
 
