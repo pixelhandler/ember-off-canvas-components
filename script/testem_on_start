@@ -1,8 +1,16 @@
 #!/bin/sh
+
+# Ensure "tmp" directory exists
 mkdir -p tmp
+
+# Start broccoli-timepiece as a background process and capture its log output and PID
 BROCCOLI_ENV=development ./node_modules/.bin/broccoli-timepiece build/ > tmp/broccoli.log 2>&1 & BROC_PID=$!
+
+# Write PID to a tmp file
 echo $BROC_PID >> tmp/BROC_PID.txt
 
+# Try to wait until broccoli prints successful output to the log file
+# before proceeding
 while ! grep -m1 'Buil' < ./tmp/broccoli.log; do
   sleep 1
 done
