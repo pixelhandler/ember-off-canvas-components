@@ -3,8 +3,8 @@
 # Ensure "tmp" directory exists
 mkdir -p tmp
 
-# Start broccoli-timepiece as a background process and capture its log output and PID
-BROCCOLI_ENV=development ./node_modules/.bin/broccoli-timepiece build/ > tmp/broccoli.log 2>&1 & BROC_PID=$!
+# Start broccoli as a background process and capture its log output and PID
+BROCCOLI_ENV=development ./node_modules/.bin/broccoli serve > tmp/broccoli.log 2>&1 & BROC_PID=$!
 
 # Write PID to a tmp file
 echo $BROC_PID >> tmp/BROC_PID.txt

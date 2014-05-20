@@ -7,7 +7,7 @@ BROC_PID=`cat tmp/BROC_PID.txt`
 kill $BROC_PID
 
 # Cleanup and say goodbye
-rm -R build
+# rm -R build
 rm tmp/BROC_PID.txt
 rm tmp/broccoli.log
 
