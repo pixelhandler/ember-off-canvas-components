@@ -1,4 +1,4 @@
-define("ella-sample/components/ella-sample-component",
+define("replace-me/components/ella-sample-component",
   ["ember","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -97,7 +97,7 @@ define("ella-sample/components/ella-sample-component",
 
     __exports__["default"] = Component.extend(EllaSampleComponent);
   });
-define("ella-sample",
+define("replace-me",
   ["./components/ella-sample-component","./templates/main-css","ember","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __exports__) {
     "use strict";
@@ -115,7 +115,7 @@ define("ella-sample",
 
     __exports__.EllaSampleComponent = EllaSampleComponent;
   });
-define("ella-sample/templates/main-css",
+define("replace-me/templates/main-css",
   ["ember","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
