@@ -13,19 +13,19 @@ provided here.**
 Get Started
 ==========================================
 
-Step 1: Clone this repository.
+#### Step 1: Clone this repository.
 
 ```
 $ git clone git@github.com:realityendshere/emberella-component-blueprint.git
 ```
 
-Step 2: Switch to the project directory
+#### Step 2: Switch to the project directory
 
 ```
 $ cd emberella-component-blueprint
 ```
 
-Step 3: Install all dependencies with NPM
+#### Step 3: Install all dependencies with NPM
 
 ```
 $ npm install
@@ -34,14 +34,14 @@ $ npm install
 Project Setup
 ==========================================
 
-Step 1: Start your own repo by removing the `.git` directory and
+#### Step 1: Start your own repo by removing the `.git` directory and
 reinitializing Git.
 
 ```
 $ rm -R .git; git init
 ```
 
-Step 2: Configure NPM
+#### Step 2: Configure NPM
 
 ```
 $ npm init
@@ -59,7 +59,7 @@ license: (ISC)
 Is this ok? (yes)
 ```
 
-Step 3: Configure Bower
+#### Step 3: Configure Bower
 
 ```
 $ bower init
@@ -87,21 +87,21 @@ Notes:
 [?] Looks good? (Y/n)
 ```
 
-Step 4: Configure module output
+#### Step 4: Configure module output
 
 Open the `output.js` file and provide your project with a global namespace and
 a package name.
 
 ```
-module.exports = {
-  global: 'YOUR_GLOBAL_NAMESPACE',
-  packageName: 'YOUR_PACKAGE_NAME',
-  main: 'main',
-  shim: {
-    'ember': 'Ember'
-  }
-};
+// Replace with your own global namespace.
+var MY_JS_GLOBAL_NAMESPACE = 'GlobalNamespace';
+
+// Replace with your own package name.
+var MY_JS_PACKAGE_NAME = 'replace-me';
 ```
+
+**Note: you will need to restart test'em (if it is running) for tests to pickup
+any changes to the global namespace**
 
 Get to Work
 ==========================================
