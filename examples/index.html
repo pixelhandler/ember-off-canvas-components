@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>Emberella Component Blueprint</title>
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
   <script type="text/x-handlebars">
-    {{#ella-sample}}Click me ({{view.tests}}){{/ella-sample}}
+    <div id="content">
+      {{#ella-sample}}
+        <h1>{{view.tests}}</h1>
+        <p>Click Me</p>
+      {{/ella-sample}}
+    </div>
   </script>
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/handlebars/handlebars.js"></script>

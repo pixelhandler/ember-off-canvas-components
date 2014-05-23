@@ -1,14 +1,13 @@
 {
   "name": "emberella-component-blueprint",
-  "version": "0.0.0",
-  "license": "MIT",
   "ignore": [
     "bower_components",
     "build",
     "examples",
     "node_modules",
-    "tasks",
-    "test",
+    "recipes",
+    "script",
+    "tests",
     "tmp",
     "vendor",
     "**/.*",
@@ -24,7 +23,7 @@
     "ic-styled": "~1.1.6"
   },
   "devDependencies": {
-    "ember-qunit": "~0.1.7",
+    "ember-qunit": "~0.1.8",
     "bootstrap": "~3.1",
     "jquery-simulate": "https://raw.github.com/jquery/jquery-simulate/master/jquery.simulate.js",
     "ic-styled": "~1.1.6"

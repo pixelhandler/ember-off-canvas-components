@@ -1,7 +1,12 @@
 #!/bin/sh
 
+node_modules/.bin/bower install
+
 # Make a symbolic link to local testem to reduce typing
 ln -sf ./node_modules/.bin/testem testem
 
 # Make a symbolic link to local grunt to reduce typing
 ln -sf ./node_modules/.bin/grunt grunt
+
+# Make a symbolic link to local broccoli (DISABLED ON PURPOSE)
+# ln -sf ./node_modules/.bin/broccoli broccoli

@@ -1,10 +1,11 @@
 @import 'variables';
 
 ella-sample {
+  background-color: $inactive_color_bg;
   color: $inactive_color;
 
-  &.activated {
+  &[activated="true"] {
+    background-color: $inactive_color_bg;
     color: $active_color;
-    font-weight: bold;
   }
 }

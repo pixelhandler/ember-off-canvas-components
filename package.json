@@ -1,40 +1,20 @@
 {
-  "name": "emberella-component-blueprint",
-  "version": "0.0.0",
-  "description": "A starting point for creating new, more portable Emberella components.",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test",
-    "postinstall": "node_modules/.bin/bower install; ./script/setup"
+    "postinstall": "./script/postinstall"
   },
-  "author": "Dana Franklin",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:realityendshere/emberella-component-blueprint.git"
-  },
-  "bugs": {
-    "url": "https://github.com/realityendshere/emberella-component-blueprint/issues"
-  },
-  "homepage": "https://github.com/realityendshere/emberella-component-blueprint",
-  "keywords": [
-    "emberella",
-    "ember",
-    "ember component",
-    "component",
-    "broccoli",
-    "example"
-  ],
   "devDependencies": {
     "bower": "^1.3.3",
     "broccoli": "^0.12.0",
     "broccoli-autoprefixer": "^0.2.0",
     "broccoli-cli": "0.0.1",
     "broccoli-coffee": "^0.1.0",
+    "broccoli-csso": "^0.2.0",
     "broccoli-dist-es6-module": "^0.2.0",
     "broccoli-ember-hbs-template-compiler": "^1.5.0",
     "broccoli-env": "0.0.1",
-    "broccoli-file-mover": "^0.3.1",
+    "broccoli-file-mover": "^0.3.2",
     "broccoli-merge-trees": "^0.1.3",
     "broccoli-sass": "^0.1.4",
     "broccoli-static-compiler": "^0.1.4",
@@ -43,9 +23,6 @@
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-testem": "^0.5.16",
-    "karma": "^0.12.16",
-    "karma-qunit": "^0.1.1",
-    "karma-safari-launcher": "^0.1.1",
     "matchdep": "^0.3.0",
     "qunitjs": "1.12.0",
     "testem": "^0.6.15"

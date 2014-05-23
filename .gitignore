@@ -23,7 +23,7 @@ coverage
 demo
 docs/build
 docs/node_modules
-grunt
+/grunt
 lib/*/tests/all.js
 lib/*/tests/qunit*
 lib/bundler/man
@@ -40,7 +40,7 @@ tmp
 tmp*.gem
 tmp.bpm
 tmp.spade
-testem
+/testem
 tests/source
 tests/source/
 tests/emberella-tests.js

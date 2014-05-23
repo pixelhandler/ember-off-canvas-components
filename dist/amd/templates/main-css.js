@@ -9,7 +9,7 @@ define(
       
 
 
-      data.buffer.push("ella-sample {\n  color: #121212; }\n  ella-sample.activated {\n    color: green;\n    font-weight: bold; }\n");
+      data.buffer.push("ella-sample{background-color:transparent;color:#000}ella-sample[activated=\"true\"]{background-color:transparent;color:green}");
       
     });
   });

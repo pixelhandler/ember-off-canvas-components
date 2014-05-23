@@ -11,7 +11,7 @@ App.injectTestHelpers();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:ella-sample': Emberella.Component.EllaSampleComponent
+    'component:ella-sample': Emberella.sample.EllaSampleComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);

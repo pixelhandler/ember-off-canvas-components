@@ -7,10 +7,13 @@ process of creating individual [Ember][ember] components, modules, or "micro-pro
 It is intended as a starting point (or project template) for developers to build
 their own fully-tested, modular [Ember Components][ember-components].
 
+**Please report any issues you encounter while using the instructions
+provided here.**
+
 Get Started
 ==========================================
 
-Step 1: Clone this repository
+Step 1: Clone this repository.
 
 ```
 $ git clone git@github.com:realityendshere/emberella-component-blueprint.git
@@ -28,19 +31,79 @@ Step 3: Install all dependencies with NPM
 $ npm install
 ```
 
-Step 4: Start your test and development server
+Project Setup
+==========================================
+
+Step 1: Start your own repo by removing the `.git` directory and
+reinitializing Git.
 
 ```
-$ ./testem
+$ rm -R .git; git init
 ```
 
-Step 5: With the testing server now running, [view the example component][example]
+Step 2: Configure NPM
 
-Step 6 (optional): Make a change to `lib/components/ella-sample-component` in
-your text editor of choice and watch the tests *and* the example page reload
-automatically
+```
+$ npm init
+```
 
-Typical Usage
+Follow the prompts to setup your project for NPM. Default values are in (parentheses).
+
+```
+name: (emberella-component-blueprint)
+version: (0.0.0)
+git repository:
+keywords:
+author:
+license: (ISC)
+Is this ok? (yes)
+```
+
+Step 3: Configure Bower
+
+```
+$ bower init
+```
+
+Follow the prompts to setup your project for Bower. Default values are in (parentheses).
+
+Notes:
++ You can probably leave "main file" blank.
++ For module types, select `amd` and `globals`.
+
+```
+[?] name: (emberella-component-blueprint)
+[?] version: (0.0.0)
+[?] description:
+[?] main file:
+[?] what types of modules does this package expose?
+[?] keywords:
+[?] authors:
+[?] license: (MIT)
+[?] homepage:
+[?] set currently installed components as dependencies? (y/N)
+[?] add commonly ignored files to ignore list? (Y/n)
+[?] would you like to mark this package as private which prevents it from being accidentally published to the registry? (y/N)
+[?] Looks good? (Y/n)
+```
+
+Step 4: Configure module output
+
+Open the `output.js` file and provide your project with a global namespace and
+a package name.
+
+```
+module.exports = {
+  global: 'YOUR_GLOBAL_NAMESPACE',
+  packageName: 'YOUR_PACKAGE_NAME',
+  main: 'main',
+  shim: {
+    'ember': 'Ember'
+  }
+};
+```
+
+Get to Work
 ==========================================
 
 To begin development and testing of your component:
@@ -55,16 +118,22 @@ your component in a browser.
 Your tests and component page will reload automatically when you save changes
 to your code.
 
+Release Your Component
+==========================================
+
 To prepare your module for distribution:
 
 ```
 $ ./grunt dist
 ```
 
-That's all there is to it. Pretty sweet, huh?
-
 Project Goals (or Wait. What? Why?)
 ==========================================
+
+My goal is ultimately to make Ember module and component development more
+ergonomic, approachable, and fun. By suggesting some guidelines and best
+practices for micro-project development, I hope the Ember community as a whole
+benefits from a broader ecosystem of well-built modules and components.
 
 Other projects, like [Ember CLI][ember-cli] exist to jumpstart app development.
 If your goal is to create a reusable, fully-tested module for Ember, then a tool
@@ -92,7 +161,7 @@ To me, running a single command, `./testem`, to begin development work is the
 ideal scenario. In this one command:
 
 * A Broccoli server will start and rebuild when it detects code changes
-* Test'em will run tests and automatically re-run the tests each time Broccoli builds
+* Test'em will run tests and automatically re-run the tests each time Broccoli attempts to build
 * The component becomes available at http://localhost:7357/examples/index.html and will automatically reload each time Broccoli builds
 
 Similarly, one command, `./grunt dist`, will build and test the component for
@@ -102,11 +171,15 @@ distribution. In this one command:
 * Test'em will run tests in multiple browsers
 * Broccoli will build the component for distribution in AMD, Named AMD, CJS, and Global module formats (thanks to [Ryan Florence's broccoli-dist-es6-module][es6-dist])
 
-(Soon, I hope to add support for automated releases.)
-
 This strategy is all experimental. After all, Broccoli may change, ports may
 clash, and errors may occur outside the golden path. Even so, I hope you find
 this component template offers some inspiration in your own micro-projects.
+
+Stay FIRST-y, My Friends
+==========================================
+
+[This article][firsty] by Addy Osmani provides some excellent advice on
+building excellent web components.
 
 Standing on the Shoulders of...
 ==========================================
@@ -131,3 +204,5 @@ And all the folks who've built or contributed to the dependencies for this proje
 [es6-dist]: https://github.com/rpflorence/broccoli-dist-es6-module "broccoli-dist-es6-module"
 [joliss]: https://github.com/joliss "Jo Liss on GitHub"
 [rpflorence]: https://github.com/rpflorence "Ryan Florence on GitHub"
+[todos]: https://github.com/realityendshere/emberella-component-blueprint/blob/master/TODO.md "TODOS"
+[firsty]: http://addyosmani.com/first/ "Components Should Be Focused, Independent, Reusable, Small, and Testable "
