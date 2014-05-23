@@ -10,6 +10,6 @@ test('Components are registered on an application', function() {
   };
   var initializer = Ember.Application.initializers['ella-sample'];
   initializer.initialize(container);
-  strictEqual(container.registry['component:ella-sample'], Emberella.sample.EllaSampleComponent);
+  strictEqual(container.registry['component:ella-sample'], NAMESPACE.EllaSampleComponent);
 });
 

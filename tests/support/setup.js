@@ -1,6 +1,7 @@
 document.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');
 
-App = Ember.Application.create({});
+var App = Ember.Application.create({});
+var NAMESPACE = Ember.get(ECB_OUTPUT_CONFIG.global);
 
 App.rootElement = '#ember-testing';
 
@@ -8,10 +9,9 @@ emq.globalize();
 App.setupForTesting();
 App.injectTestHelpers();
 
-
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:ella-sample': Emberella.sample.EllaSampleComponent
+    'component:ella-sample': NAMESPACE.EllaSampleComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
@@ -22,7 +22,7 @@ setResolver(Ember.DefaultResolver.extend({
 Function.prototype.compile = function() {
   var template = this.toString().split('\n').slice(1,-1).join('\n') + '\n';
   return Ember.Handlebars.compile(template);
-}
+};
 
 function lookupComponent(id) {
   return Ember.View.views[id];
