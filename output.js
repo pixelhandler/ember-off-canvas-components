@@ -1,8 +1,8 @@
 // Replace with your own global namespace.
-var MY_JS_GLOBAL_NAMESPACE = 'GlobalNamespace';
+var MY_JS_GLOBAL_NAMESPACE = 'OCC';
 
 // Replace with your own package name.
-var MY_JS_PACKAGE_NAME = 'replace-me';
+var MY_JS_PACKAGE_NAME = 'ember-off-canvas-component';
 
 
 

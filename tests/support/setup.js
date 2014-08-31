@@ -11,7 +11,7 @@ App.injectTestHelpers();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:ella-sample': NAMESPACE.EllaSampleComponent
+    'component:off-canvas': NAMESPACE.OffCanvasComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
@@ -32,7 +32,7 @@ function buildComponent(test, props) {
   props = props || {};
   var component = test.subject(Ember.merge({
     template: function(){/*
-      <span>Click me</span>
+      <span>Contents</span>
     */}.compile()
   }, props));
   test.append();

@@ -1,5 +1,5 @@
 {
-  "name": "emberella-component-blueprint",
+  "name": "ember-off-canvas-component",
   "ignore": [
     "bower_components",
     "build",
@@ -19,7 +19,7 @@
     "TODO.md"
   ],
   "dependencies": {
-    "ember": "1.5.0",
+    "ember": "1.7.0",
     "ic-styled": "~1.1.6"
   },
   "devDependencies": {

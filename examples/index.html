@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Emberella Component Blueprint</title>
+    <title>Ember Off Canvas Component</title>
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-  <script type="text/x-handlebars">
-    <div id="content">
-      {{#ella-sample}}
-        <h1>{{view.tests}}</h1>
-        <p>Click Me</p>
-      {{/ella-sample}}
+
+  <script type="text/x-handlebars" id="application">
+    <div class="content">
+      <button class="off-canvas-opener">Toggle Off Canvas</button>
     </div>
+
+    {{#off-canvas}}
+      <button class="off-canvas-closer">Close</button>
+      <br>
+      <div class="off-canvas-body">Off Canvas Contents</div>
+    {{/off-canvas}}
   </script>
+
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/handlebars/handlebars.js"></script>
   <script src="../bower_components/ember/ember.js"></script>
   <script src="../bower_components/ic-styled/main.js"></script>
-  <!--<script src="../dist/globals/main.js"></script>-->
   <script src="http://localhost:4200/globals/main.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 
   <script>
-    App = Ember.Application.create();
+    var App = Ember.Application.create({
+      customEvents: {
+        toggleOffCanvas: 'toggleOffCanvas'
+      }
+    });
+    App.ApplicationView = Ember.View.extend({
+      click: function (evt) {
+        var el = evt.target;
+        var matcher = /\off\-canvas\-/;
+        if (el.className.match(matcher) != null) {
+          toggleOffCanvas();
+        }
+        return true;
+      },
+      eventManager: {
+        toggleOffCanvas: function (evt) {
+          toggleOffCanvas();
+        }
+      }
+    })
+    var toggleOffCanvas = function () {
+      Em.$('.ember-application').toggleClass('off-canvas-expanded');
+    };
   </script>
   </body>
 </html>

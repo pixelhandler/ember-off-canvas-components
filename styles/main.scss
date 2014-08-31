@@ -1,11 +1,78 @@
 @import 'variables';
+@import 'mixins';
 
-ella-sample {
-  background-color: $inactive_color_bg;
-  color: $inactive_color;
 
-  &[activated="true"] {
-    background-color: $inactive_color_bg;
-    color: $active_color;
+// Off Canvas Component
+
+off-canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0 - $width;
+  width: $width;
+  height: 100%;
+  @include off-canvas-transition('right');
+  overflow: auto;
+  z-index: 2000;
+
+  &.off-canvas-default {
+    background: -webkit-linear-gradient(left, $white-color 0%, $medium-white-color 24%, $dark-white-color 100%);
+    border-radius: 0;
+    border-left-color: $border-color;
+    box-shadow: inset 0px 1px 20px -10px $shadow-color;
   }
 }
+
+// Content
+
+.content {
+  left: 0;
+  margin-right: 0;
+  position: relative;
+  width: 100%;
+  @include off-canvas-transition('left margin-right');
+}
+
+// Links
+
+.off-canvas-opener {
+  top: 0;
+  right: 0;
+  position: absolute;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.off-canvas-closer {
+  top: 0;
+  right: 0 - $width;
+  position: fixed;
+  @include off-canvas-transition('right');
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Expanded
+
+.off-canvas-expanded {
+  off-canvas {
+    right: 0;
+  }
+
+  .content {
+    left: 0 - $width;
+    margin-right: $width;
+    @include off-canvas-transition('left margin-right');
+  }
+
+  .off-canvas-closer {
+    right: 0;
+    @include off-canvas-transition('right');
+  }
+
+}
+

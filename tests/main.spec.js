@@ -8,8 +8,7 @@ test('Components are registered on an application', function() {
       this.registry[name] = definition;
     }
   };
-  var initializer = Ember.Application.initializers['ella-sample'];
+  var initializer = Ember.Application.initializers['off-canvas'];
   initializer.initialize(container);
-  strictEqual(container.registry['component:ella-sample'], NAMESPACE.EllaSampleComponent);
+  strictEqual(container.registry['component:off-canvas'], NAMESPACE.OffCanvasComponent);
 });
-

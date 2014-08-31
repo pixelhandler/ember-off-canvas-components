@@ -1,4 +1,4 @@
-define("replace-me/components/ella-sample-component",
+define("ember-off-canvas-component/components/ella-sample-component",
   ["ember","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
@@ -97,7 +97,7 @@ define("replace-me/components/ella-sample-component",
 
     __exports__["default"] = Component.extend(EllaSampleComponent);
   });
-define("replace-me",
+define("ember-off-canvas-component",
   ["./components/ella-sample-component","./templates/main-css","ember","exports"],
   function(__dependency1__, __dependency2__, __dependency3__, __exports__) {
     "use strict";
@@ -115,7 +115,7 @@ define("replace-me",
 
     __exports__.EllaSampleComponent = EllaSampleComponent;
   });
-define("replace-me/templates/main-css",
+define("ember-off-canvas-component/templates/main-css",
   ["ember","exports"],
   function(__dependency1__, __exports__) {
     "use strict";

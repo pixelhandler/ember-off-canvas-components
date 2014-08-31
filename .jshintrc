@@ -1,8 +1,9 @@
 {
     "predef": [
-        "console",
+        "ECB_OUTPUT_CONFIG",
+        "NAMESPACE",
+        "OCC",
         "Ember",
-        "Emberella",
         "Handlebars",
         "Metamorph",
         "ember_assert",
@@ -24,24 +25,24 @@
         "strictEqual",
         "module",
         "expect",
-        "minispade",
-        "clickRelLink",
-        "appendIntoDOM",
-        "isAppendedToDOM",
-        "isDestroyed",
-        "documentHasSelector",
-        "destroyIfNecessary"
+        "fillIn",
+        "click",
+        "visit",
+        "andThen"
+        "console",
+        "emq",
+        "setResolver"
     ],
 
-    "node" : false,
+    "node" : true,
     "browser" : true,
-
     "boss" : true,
     "curly": false,
     "debug": false,
     "devel": false,
     "eqeqeq": false,
     "eqnull": true,
+    "esnext": true,
     "evil": true,
     "expr": true,
     "forin": false,
