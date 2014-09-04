@@ -1,5 +1,5 @@
 {
-  "name": "ember-off-canvas-component",
+  "name": "ember-off-canvas-ui-components",
   "ignore": [
     "bower_components",
     "build",

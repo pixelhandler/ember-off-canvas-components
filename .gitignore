@@ -21,6 +21,7 @@ vendor
 build
 coverage
 demo
+dist
 docs/build
 docs/node_modules
 /grunt

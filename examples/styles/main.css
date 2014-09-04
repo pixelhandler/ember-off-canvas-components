@@ -6,11 +6,11 @@ body {
   position: relative;
 }
 
-.off-canvas-opener, .off-canvas-closer {
+off-canvas-opener, off-canvas-closer {
   margin: 1em;
 }
 
-.off-canvas-body {
+.off-canvas-body, .on-canvas-body {
   margin: 2em;
   padding: 1em;
   border-top: 2px dotted #efefef;

@@ -6,6 +6,7 @@
     "bower_components/ember/ember.js",
     "bower_components/jquery-simulate/index.js",
     "bower_components/ember-qunit/dist/globals/main.js",
+    "bower_components/ic-styled/main.js",
     "http://localhost:4200/globals/main.js",
     "output.js",
     "tests/support/setup.js",

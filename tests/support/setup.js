@@ -11,13 +11,16 @@ App.injectTestHelpers();
 
 setResolver(Ember.DefaultResolver.extend({
   testSubjects: {
-    'component:off-canvas': NAMESPACE.OffCanvasComponent
+    'component:eoc-viewport': NAMESPACE.EOCViewportComponent,
+    'component:on-canvas': NAMESPACE.OnCanvasComponent,
+    'component:off-canvas': NAMESPACE.OffCanvasComponent,
+    'component:off-canvas-opener': NAMESPACE.OffCanvasOpenerComponent,
+    'component:off-canvas-closer': NAMESPACE.OffCanvasCloserComponent
   },
   resolve: function(fullName) {
     return this.testSubjects[fullName] || this._super.apply(this, arguments);
   }
 }).create());
-
 
 Function.prototype.compile = function() {
   var template = this.toString().split('\n').slice(1,-1).join('\n') + '\n';
