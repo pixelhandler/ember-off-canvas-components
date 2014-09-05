@@ -1,0 +1,17 @@
+/* Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+off-canvas-opener, off-canvas-closer {
+  margin: 1em;
+}
+
+.off-canvas-body, .on-canvas-body {
+  margin: 2em;
+  padding: 1em;
+  border-top: 2px dotted #efefef;
+}

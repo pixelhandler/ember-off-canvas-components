@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ember Off Canvas UI Components</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <script type="text/x-handlebars" id="application">
+    {{#eoc-viewport}}
+      {{#on-canvas}}
+        {{#off-canvas-opener}}
+          <i class="fa fa-bars"></i>
+        {{/off-canvas-opener}}
+        <br>
+        <div class="on-canvas-body">
+          <p>On Canvas Contents</p>
+          {{outlet}}
+        </div>
+      {{/on-canvas}}
+
+      {{#off-canvas}}
+        {{#off-canvas-closer}}
+          <i class="fa fa-times"></i>
+        {{/off-canvas-closer}}
+        <br>
+        <div class="off-canvas-body">
+          <p>Off Canvas Contents</p>
+          <p>Perhaps do some asynchronous stuff then close the panel...</p>
+          <button {{action 'asyncStuff' 'eoc-viewport' 'collapseOffCanvas'}}>Async Close</button>
+          {{outlet off-canvas}}
+        </div>
+      {{/off-canvas}}
+    {{/eoc-viewport}}
+  </script>
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/handlebars/handlebars.js"></script>
+  <script src="../bower_components/ember/ember.js"></script>
+  <script src="../bower_components/ic-styled/main.js"></script>
+  <script src="http://localhost:4200/globals/main.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+
+  <script>
+    var App = Ember.Application.create();
+
+    App.ApplicationController = Ember.ObjectController.extend({
+      actions: {
+        asyncStuff: function(elementName, eventName) {
+          Ember.run.later(this, asycToggleOffCanvas, elementName, eventName, 1000);
+        }
+      }
+    });
+
+    var asycToggleOffCanvas = function (elName, evtName) {
+      if (typeof elName == 'string' && typeof evtName == 'string') {
+        Em.$(elName).trigger(evtName);
+      }
+    };
+  </script>
+  </body>
+</html>
