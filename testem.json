@@ -1,5 +1,8 @@
 {
   "framework": "qunit",
+  "css_files": [
+    "tests/support/styles.css"
+  ],
   "serve_files": [
     "bower_components/jquery/dist/jquery.js",
     "bower_components/handlebars/handlebars.js",
@@ -18,8 +21,8 @@
     "tests/**/*.spec.js"
   ],
   "parallel": 4,
-  "launch_in_dev": ["PhantomJS", "Safari", "Chrome"],
-  "launch_in_ci": ["PhantomJS", "Chrome", "Firefox", "Safari", "IE7", "IE8", "IE9"],
+  "launch_in_dev": ["PhantomJS", "Safari", "Chrome", "Firefox"],
+  "launch_in_ci": ["PhantomJS"],
   "on_start": "script/testem_on_start",
   "on_exit": "script/testem_on_exit"
 }
