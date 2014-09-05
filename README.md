@@ -18,10 +18,14 @@ user interface, see [demo].
 [npm]: https://www.npmjs.org "NPM"
 
 
-## Build
+## Build / Dist
 
 This micro library uses ES6 modules, which can be built for distribution in
 various module formats: AMD, CJS, globals, etc.
+
+**[Download a built module][dist]**
+
+[dist]: https://github.com/pixelhandler/ember-off-canvas-components/tree/gh-pages/dist
 
 To build execute:
 
