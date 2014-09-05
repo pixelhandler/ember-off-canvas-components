@@ -1,8 +1,9 @@
 # Ember Off Canvas Components
 
 A micro library for a group of components that interact to create an off-canvas
-user interface
+user interface, see [demo].
 
+[demo]: http://pixelhandler.github.io/ember-off-canvas-components/
 
 ## Get Started
 
