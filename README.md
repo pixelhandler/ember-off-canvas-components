@@ -5,6 +5,9 @@ user interface, see [demo].
 
 [demo]: http://pixelhandler.github.io/ember-off-canvas-components/
 
+[![Build Status](https://travis-ci.org/pixelhandler/ember-off-canvas-components.svg?branch=v0.1.0)](https://travis-ci.org/pixelhandler/ember-off-canvas-components)
+
+
 ## Get Started
 
 1. Clone this repository
