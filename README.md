@@ -1,7 +1,9 @@
 # Ember Off Canvas Components
 
 A micro library for a group of components that interact to create an off-canvas
-user interface, see [demo].
+user interface, see [demo]. 
+
+Off-canvas menus are positioned outside of the viewport and slide in when activated. (Off-canvas is a UI pattern and not associated with the html `canvas` element)
 
 [demo]: http://pixelhandler.github.io/ember-off-canvas-components/
 
