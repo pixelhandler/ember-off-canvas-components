@@ -10,12 +10,16 @@
   <script type="text/x-handlebars" id="application">
     {{#eoc-viewport}}
       {{#on-canvas}}
-        {{#off-canvas-opener}}
+        {{#off-canvas-opener useToggle=true}}
           <i class="fa fa-bars"></i>
         {{/off-canvas-opener}}
         <br>
         <div class="on-canvas-body">
-          <p>On Canvas Contents</p>
+          <p>
+            {{#off-canvas-opener inline=true}}
+              Open Off-Canvas Panel
+            {{/off-canvas-opener}}
+          </p>
           {{outlet}}
         </div>
       {{/on-canvas}}
