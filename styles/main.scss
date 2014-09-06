@@ -49,12 +49,21 @@ off-canvas {
 // Off Canvas Opener Component
 
 off-canvas-opener {
-  top: 0;
-  right: 0;
-  position: absolute;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &.off-canvas-opener-default {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &.off-canvas-opener-inline {
+    top: auto;
+    right: auto;
+    position: relative;
   }
 }
 

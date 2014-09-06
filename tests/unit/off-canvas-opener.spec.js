@@ -1,4 +1,8 @@
-moduleForComponent('off-canvas-opener');
+moduleForComponent('off-canvas-opener', 'off-canvas-opener', {
+  teardown: function() {
+    App.reset();
+  }
+});
 
 test('element tagName is off-canvas-opener', function() {
   expect(1);
@@ -24,6 +28,28 @@ test('when clicked triggers "expandOffCanvas" event', function() {
   andThen(function () {
     Ember.run.later(function () {
       ok(didFire, 'expandOffCanvas event fired');
+      start();
+    }, 600);
+  });
+});
+
+test('when useToggle is true, click triggers "toggleOffCanvas" event', function() {
+  expect(1);
+  var component = buildComponent(this, {useToggle: true});
+  var didFire = false;
+
+  Ember.run(function () {
+    Ember.$('off-canvas-opener').on('toggleOffCanvas', function () {
+      didFire = true;
+    });
+  });
+
+  click('off-canvas-opener');
+  stop();
+
+  andThen(function () {
+    Ember.run.later(function () {
+      ok(didFire, 'toggleOffCanvas event fired');
       start();
     }, 600);
   });
