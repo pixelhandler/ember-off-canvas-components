@@ -103,10 +103,18 @@
   <script>
     var App = Ember.Application.create();
 
-    App.ApplicationController = Ember.ObjectController.extend({
+    App.IndexRoute = Ember.Route.extend({
+      renderTemplate: function (controller, model) {
+        this._super(controller, model);
+        this.render('off-canvas', { outlet: 'off-canvas', controller: controller });
+      }
+    });
+
+    App.IndexController = Ember.ObjectController.extend({
       actions: {
         asyncStuff: function(elementName, eventName) {
           Ember.run.later(this, asycToggleOffCanvas, elementName, eventName, 1000);
+          return false;
         }
       }
     });
@@ -116,13 +124,6 @@
         Em.$(elName).trigger(evtName);
       }
     };
-
-    App.IndexRoute = Ember.Route.extend({
-      renderTemplate: function (controller, model) {
-        this._super(controller, model);
-        this.render('off-canvas', { outlet: 'off-canvas' });
-      }
-    });
   </script>
   </body>
 </html>
