@@ -1,9 +1,16 @@
 # Ember Off Canvas Components
 
 A micro library for a group of components that interact to create an off-canvas
-user interface, see [demo].
+user interface
+
+**[View a demo][demo].** 
+
+Off-canvas menus are positioned outside of the viewport and slide in when activated. (Off-canvas is a UI pattern and not associated with the html `canvas` element)
 
 [demo]: http://pixelhandler.github.io/ember-off-canvas-components/
+
+[![Build Status](https://travis-ci.org/pixelhandler/ember-off-canvas-components.svg?branch=v0.1.0)](https://travis-ci.org/pixelhandler/ember-off-canvas-components)
+
 
 ## Get Started
 
@@ -15,10 +22,14 @@ user interface, see [demo].
 [npm]: https://www.npmjs.org "NPM"
 
 
-## Build
+## Build / Dist
 
 This micro library uses ES6 modules, which can be built for distribution in
 various module formats: AMD, CJS, globals, etc.
+
+**[Download a built module][dist]**
+
+[dist]: https://github.com/pixelhandler/ember-off-canvas-components/tree/gh-pages/dist
 
 To build execute:
 
