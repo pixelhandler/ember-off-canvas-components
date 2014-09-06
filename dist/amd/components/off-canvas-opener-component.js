@@ -28,10 +28,22 @@ define(
       */
       tagName: 'off-canvas-opener',
 
-      classNames: ['off-canvas-opener-default'],
+      classNames: [''],
+
+      classNameBindings: ['inline:off-canvas-opener-inline:off-canvas-opener-default'],
+
+      inline: false,
+
+      useToggle: false,
 
       click: function (evt) {
-        Em.$(evt.target).trigger('expandOffCanvas');
+        var eventName;
+        if (this.get('useToggle')) {
+          eventName = 'toggleOffCanvas';
+        } else {
+          eventName = 'expandOffCanvas';
+        }
+        Em.$(evt.target).trigger(eventName);
         return false;
       }
     });
