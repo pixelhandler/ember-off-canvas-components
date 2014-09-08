@@ -34,6 +34,16 @@ exports["default"] = Component.extend({
   useToggle: false,
 
   click: function (evt) {
+    this.triggerEvent(evt);
+    return false;
+  },
+
+  touchEnd: function (evt) {
+    this.triggerEvent(evt);
+    return false;
+  },
+
+  triggerEvent: function (evt) {
     var eventName;
     if (this.get('useToggle')) {
       eventName = 'toggleOffCanvas';
@@ -41,6 +51,5 @@ exports["default"] = Component.extend({
       eventName = 'expandOffCanvas';
     }
     Em.$(evt.target).trigger(eventName);
-    return false;
   }
 });

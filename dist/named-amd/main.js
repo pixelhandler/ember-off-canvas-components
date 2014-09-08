@@ -90,8 +90,17 @@ define("ember-off-canvas-ui-components/components/off-canvas-closer-component",
       classNames: ['off-canvas-opener-closer'],
 
       click: function (evt) {
-        Em.$(evt.target).trigger('collapseOffCanvas');
+        this.triggerEvent(evt);
         return false;
+      },
+
+      touchEnd: function (evt) {
+        this.triggerEvent(evt);
+        return false;
+      },
+
+      triggerEvent: function (evt) {
+        Em.$(evt.target).trigger('collapseOffCanvas');
       }
     });
   });
@@ -173,6 +182,16 @@ define("ember-off-canvas-ui-components/components/off-canvas-opener-component",
       useToggle: false,
 
       click: function (evt) {
+        this.triggerEvent(evt);
+        return false;
+      },
+
+      touchEnd: function (evt) {
+        this.triggerEvent(evt);
+        return false;
+      },
+
+      triggerEvent: function (evt) {
         var eventName;
         if (this.get('useToggle')) {
           eventName = 'toggleOffCanvas';
@@ -180,7 +199,6 @@ define("ember-off-canvas-ui-components/components/off-canvas-opener-component",
           eventName = 'expandOffCanvas';
         }
         Em.$(evt.target).trigger(eventName);
-        return false;
       }
     });
   });

@@ -37,6 +37,16 @@ define(
       useToggle: false,
 
       click: function (evt) {
+        this.triggerEvent(evt);
+        return false;
+      },
+
+      touchEnd: function (evt) {
+        this.triggerEvent(evt);
+        return false;
+      },
+
+      triggerEvent: function (evt) {
         var eventName;
         if (this.get('useToggle')) {
           eventName = 'toggleOffCanvas';
@@ -44,7 +54,6 @@ define(
           eventName = 'expandOffCanvas';
         }
         Em.$(evt.target).trigger(eventName);
-        return false;
       }
     });
   });
