@@ -15,6 +15,7 @@ on-canvas {
   margin-right: 0;
   position: relative;
   width: 100%;
+  overflow: auto;
   @include off-canvas-transition('left margin-right');
 
   &.on-canvas-default {
