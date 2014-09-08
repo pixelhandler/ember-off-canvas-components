@@ -31,17 +31,8 @@ define(
       classNames: ['off-canvas-opener-closer'],
 
       click: function (evt) {
-        this.triggerEvent(evt);
-        return false;
-      },
-
-      touchEnd: function (evt) {
-        this.triggerEvent(evt);
-        return false;
-      },
-
-      triggerEvent: function (evt) {
         Em.$(evt.target).trigger('collapseOffCanvas');
+        return false;
       }
     });
   });
