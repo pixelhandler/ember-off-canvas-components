@@ -3,7 +3,7 @@
   "description": "A micro library containing a group of [Ember.js Components] that interact to create an Off-Canvas user interface.",
   "version": "0.1.2",
   "private": false,
-  "main": "Gruntfile.js",
+  "main": "dist/globals/main.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/pixelhandler/ember-off-canvas-components.git"
@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "test": "grunt test",
+    "prepublish": "./script/postinstall",
     "postinstall": "./script/postinstall"
   },
   "directories": {
