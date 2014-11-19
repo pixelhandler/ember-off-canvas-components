@@ -1,0 +1,18 @@
+@import 'variables';
+
+// Mixins
+
+@mixin off-canvas-transition($properties) {
+  -webkit-transition-property: $properties;
+  -webkit-transition-duration: $transition-duration;
+  -moz-transition-property: $properties;
+  -moz-transition-duration: $transition-duration;
+  -ms-transition-property: $properties;
+  -ms-transition-duration: $transition-duration;
+  -o-transition-property: $properties;
+  -o-transition-duration: $transition-duration;
+
+  transition-property: $properties;
+  transition-duration: $transition-duration;
+  transition-timing-function: ease-in-out 0s;
+}

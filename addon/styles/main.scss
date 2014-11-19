@@ -1,0 +1,102 @@
+@import 'variables';
+@import 'mixins';
+
+// EOC Viewport Component
+
+eoc-viewport {
+  width: auto;
+  position: relative;
+}
+
+// On Canvas Component
+
+on-canvas {
+  left: 0;
+  margin-right: 0;
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  @include off-canvas-transition('left margin-right');
+
+  &.on-canvas-default {
+    background: -webkit-linear-gradient(left, $medium-white-color 0%, $dark-white-color 24%, $light-color 100%);
+    position: fixed;
+    height: 100%;
+  }
+}
+
+// Off Canvas Component
+
+off-canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0 - $width;
+  width: $width;
+  max-width: 100%;
+  height: 100%;
+  @include off-canvas-transition('right');
+  overflow: auto;
+  z-index: 2000;
+
+  &.off-canvas-default {
+    background: -webkit-linear-gradient(left, $white-color 0%, $medium-white-color 24%, $dark-white-color 100%);
+    border-radius: 0;
+    border-left-color: $border-color;
+    box-shadow: inset 0px 1px 20px -10px $shadow-color;
+  }
+}
+
+// Off Canvas Opener Component
+
+off-canvas-opener {
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.off-canvas-opener-default {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &.off-canvas-opener-inline {
+    top: auto;
+    right: auto;
+    position: relative;
+  }
+}
+
+// Off Canvas Closer Component
+
+off-canvas-closer {
+  top: 0;
+  right: 0 - $width;
+  position: fixed;
+  @include off-canvas-transition('right');
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Expanded Display
+
+.off-canvas-expanded {
+  off-canvas {
+    right: 0;
+  }
+
+  on-canvas {
+    left: 0 - $width;
+    margin-right: $width;
+    @include off-canvas-transition('left margin-right');
+  }
+
+  off-canvas-closer {
+    right: 0;
+    @include off-canvas-transition('right');
+  }
+
+}
