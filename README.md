@@ -7,6 +7,8 @@ This README outlines the details of collaborating on this Ember addon.
 * `git clone` this repository
 * `npm install`
 * `bower install`
+* `npm run build` requires sass either node libsass or sass gem for
+  `sass` command, see `sass` command under the scripts in [package.json]
 
 ## Running
 
@@ -21,5 +23,7 @@ This README outlines the details of collaborating on this Ember addon.
 ## Building
 
 * `ember build`
+* `npm run build` or `npm run sass` if you make changes in
+  addons/styles/scss (base styles)
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
