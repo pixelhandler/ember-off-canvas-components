@@ -1,6 +1,7 @@
 {
   "name": "ember-off-canvas-components",
-  "version": "0.0.0",
+  "version": "0.2.0",
+  "description": "A micro library of [Ember.js] components that interact to create an Off-Canvas user interface.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -10,11 +11,18 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pixelhandler/ember-off-canvas-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixelhandler/ember-off-canvas-components/issues"
+  },
+  "homepage": "https://github.com/pixelhandler/ember-off-canvas-components",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Bill Heaton",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -31,7 +39,10 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "emberjs",
+    "components",
+    "off-canvas"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
