@@ -7,9 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "sass": "sass ./addon/styles/scss/main.scss ./vendor/ember-off-canvas.css",
     "start": "ember server",
-    "build": "npm run sass && ember build",
+    "build": "ember build",
     "test": "ember test"
   },
   "repository": {
@@ -29,6 +28,7 @@
     "body-parser": "^1.2.0",
     "broccoli-asset-rev": "0.3.1",
     "broccoli-ember-hbs-template-compiler": "^1.6.1",
+    "broccoli-env": "0.0.1",
     "ember-cli": "0.1.2",
     "ember-cli-content-security-policy": "0.3.0",
     "ember-cli-ic-ajax": "0.1.1",
@@ -37,7 +37,8 @@
     "ember-data": "1.0.0-beta.10",
     "ember-export-application-global": "^1.0.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.0.5",
+    "node-sass": "^1.2.3"
   },
   "keywords": [
     "ember-addon",

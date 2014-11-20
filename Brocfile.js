@@ -1,18 +1,8 @@
 /* global require, module */
+var env = require('broccoli-env').getEnv();
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
-
 var app = new EmberAddon();
-/* in package json "ember-cli-sass": "^3.0.3" ?
-var app = new EmberAddon({
-  sassOptions: {
-    includePaths: ['addon/styles/scss'],
-    inputFile: 'main.scss',
-    outputFile: 'vendor/ember-off-canvas.css',
-    sourceMap: true
-  }
-});
-*/
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
