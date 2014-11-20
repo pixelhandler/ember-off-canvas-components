@@ -7,12 +7,13 @@ module.exports = {
   included: function(app, parentAddon) {
     'use strict';
     var target = (parentAddon || app);
+    var vendorFile = 'vendor/ember-off-canvas-components.css';
 
     compileCss(target.env);
 
-    target.import('./vendor/ember-off-canvas.css');
+    target.import(vendorFile);
     if (target.env === 'development') {
-      target.import('./vendor/ember-off-canvas.css.map');
+      target.import(vendorFile + '.map');
     }
   }
 };
