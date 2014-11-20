@@ -25,16 +25,14 @@ Use this addon in you ember-cli application...
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-* `npm run build` requires sass either node libsass or sass gem for
-  `sass` command, see `sass` command under the scripts in [package.json]
+    git clone git@github.com:pixelhandler/ember-off-canvas-components.git
+    cd ember-off-canvas-components
+    npm install
 
 ## Running
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+1. `ember server`
+2. Visit your app at <http://localhost:4200>.
 
 ## Running Tests
 
@@ -44,7 +42,27 @@ Use this addon in you ember-cli application...
 ## Building
 
 * `ember build`
-* `npm run build` or `npm run sass` if you make changes in
-  addons/styles/scss (base styles)
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+## Test the addon as a dependency
+
+The dummy app is used for the demo on the gh-pages branch. Test out the
+addon in an ember-cli by copying some of the source code of the dummy app. 
+
+    cd ember-off-canvas-components
+    npm link
+    cd ../
+    ember new test-app
+    cd test-app
+    npm link ember-off-canvas-components
+    npm install --save-dev ember-off-canvas-components
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/templates/application.hbs app/templates/application.hbs
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/templates/index.hbs app/templates/index.hbs
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/templates/off-canvas.hbs app/templates/off-canvas.hbs
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/controllers/index.js app/controllers/index.js
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/routes/index.js app/routes/index.js
+    cp node_modules/ember-off-canvas-components/tests/dummy/app/styles/app.css app/styles/app.css
+    ember server
+
+
