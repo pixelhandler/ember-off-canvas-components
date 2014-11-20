@@ -1,6 +1,4 @@
 /* global require, module */
-var env = require('broccoli-env').getEnv();
-
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 var app = new EmberAddon();
 

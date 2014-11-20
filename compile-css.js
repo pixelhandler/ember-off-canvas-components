@@ -8,7 +8,11 @@ module.exports = function (env) {
   sass.render({
     file: path.resolve(__dirname, 'addon/styles/scss/main.scss'),
     success: function(css) {
-      console.log('node-sass compiled', vendorFile.split(__dirname)[1]);
+      console.log('node-sass compiled...');
+      console.log(vendorFile.split(__dirname)[1]);
+      if (env === 'development') {
+        console.log(vendorFile.split(__dirname)[1] + '.map');
+      }
     },
     error: function(error) {
       console.error(error);

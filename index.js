@@ -1,5 +1,4 @@
 /* global require, module */
-var env = require('broccoli-env').getEnv();
 var compileCss = require('./compile-css');
 
 module.exports = {
@@ -7,11 +6,12 @@ module.exports = {
 
   included: function(app, parentAddon) {
     'use strict';
-    compileCss(env);
-
     var target = (parentAddon || app);
+
+    compileCss(target.env);
+
     target.import('./vendor/ember-off-canvas.css');
-    if (env === 'development') {
+    if (target.env === 'development') {
       target.import('./vendor/ember-off-canvas.css.map');
     }
   }
