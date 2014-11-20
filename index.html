@@ -2,131 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ember Off Canvas UI Components</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <base href="/">
+<meta name="dummy/config/environment" content="%7B%22modulePrefix%22%3A%22dummy%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22LOG_ACTIVE_GENERATION%22%3Atrue%2C%22LOG_VIEW_LOOKUPS%22%3Atrue%7D%2C%22contentSecurityPolicy%22%3A%7B%22font-src%22%3A%22%27self%27%20data%3A%20maxcdn.bootstrapcdn.com%22%2C%22style-src%22%3A%22%27self%27%20%27unsafe-inline%27%20maxcdn.bootstrapcdn.com%22%2C%22default-src%22%3A%22%27none%27%22%2C%22script-src%22%3A%22%27self%27%20%27unsafe-eval%27%22%2C%22connect-src%22%3A%22%27self%27%22%2C%22img-src%22%3A%22%27self%27%22%2C%22media-src%22%3A%22%27self%27%22%7D%2C%22contentSecurityPolicyHeader%22%3A%22Content-Security-Policy-Report-Only%22%2C%22exportApplicationGlobal%22%3Atrue%7D">
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/dummy.css">
   </head>
   <body>
+    
 
-  <script type="text/x-handlebars" id="application">
-    {{#eoc-viewport}}
-      {{#on-canvas}}
-        {{#off-canvas-opener useToggle=true}}
-          <i class="fa fa-bars"></i>
-        {{/off-canvas-opener}}
-        <br>
-        <div class="on-canvas-body">
-          {{outlet}}
-        </div>
-      {{/on-canvas}}
-
-      {{#off-canvas}}
-        {{#off-canvas-closer}}
-          <i class="fa fa-times"></i>
-        {{/off-canvas-closer}}
-        <br>
-        <div class="off-canvas-body">
-          {{outlet off-canvas}}
-        </div>
-      {{/off-canvas}}
-    {{/eoc-viewport}}
-  </script>
-
-  <script type="text/x-handlebars" id="index">
-    <p>
-      {{#off-canvas-opener inline=true}}
-        Open Off-Canvas Panel
-      {{/off-canvas-opener}}
-    </p>
-    <h1>Components Included:</h1>
-    <p>
-      The application template this demo uses is a group of components:
-      <code>eoc-viewport</code>, <code>on-canvas</code>, <code>off-canvas</code>,
-      <code>off-canvas-opener</code> and <code>off-canvas-closer</code>.
-    </p>
-    <dl>
-      <dt>eoc-viewport</dt>
-      <dd>
-        Container for the group of components, listens to custom events. When
-        <code>active=true</code> the <code>eoc-viewport</code> element uses the CSS class
-        <code>off-canvas-expanded</code>. Child elements have default CSS to transition the
-        <code>off-canvas</code> from the right into view, pushing the <code>on-canvas</code>
-        element over to the left.
-      </dd>
-      <dt>on-canvas</dt>
-      <dd>
-        Main area that is intended to be visible by default (on screen)
-      </dd>
-      <dt>off-canvas</dt>
-      <dd>
-        Secondary area off-screen (not visible) by default
-      </dd>
-      <dt>off-canvas-opener</dt>
-      <dd>
-        Expands the <code>off-canvas</code> element (show), uses custom event
-        <code>expandOffCanvas</code> and has option for using <code>toggleOffCanvas</code>,
-        <code>useToggle=true</code>. Option <code>inline=true</code> uses a the CSS class 
-        <code>off-canvas-opener-inline</code> instead of <code>off-canvas-opener-default</code>
-      </dd>
-      <dt>off-canvas-closer</dt>
-      <dd>
-        Collapses the <code>off-canvas</code> element (hide), uses custom event 
-        <code>collapseOffCanvas</code>
-      </dd>
-    </dl>
-    <a href="https://github.com/pixelhandler/ember-off-canvas-components">View Source Github</a>
-  </script>
-
-  <script type="text/x-handlebars" id="off-canvas">
-    <h2>Off Canvas Contents:</h2>
-    <p>Yeah this is not a pretty demo, it is about encapsultating simple behaviors for the 
-    Off-Canvas user interface (UI design pattern) into Web Components.</p>
-    <p>Each component in the group may fire custom events that communicate a specific
-    command, while another component can listen, as the events bubble.</p>
-    <p>Checkout the <a href="https://github.com/pixelhandler/ember-off-canvas-components/tree/master/tests">
-    unit and acceptance tests</a> for more details.</p>
-    <p>See the <a href="https://github.com/pixelhandler/ember-off-canvas-components/tree/master/examples">
-    examples directory in the github repo</a> to view the source code for this demo.</p>
-    <br>
-    <p>Perhaps do some asynchronous stuff then close the panel...</p>
-    <button {{action 'asyncStuff' 'eoc-viewport' 'collapseOffCanvas'}}>Async Close</button>
-    <br><br>
-    <a href="https://github.com/pixelhandler/ember-off-canvas-components">View Source Github</a>
-  </script>
-
-  <script src="./vendor/jquery.js"></script>
-  <script src="./vendor/handlebars.js"></script>
-  <script src="./vendor/ember.js"></script>
-  <script src="./vendor/ic-styled.js"></script>
-  <script src="./dist/globals/main.js"></script>
-
-  <script>
-    var App = Ember.Application.create();
-
-    App.IndexRoute = Ember.Route.extend({
-      renderTemplate: function (controller, model) {
-        this._super(controller, model);
-        this.render('off-canvas', { outlet: 'off-canvas', controller: controller });
-      }
-    });
-
-    App.IndexController = Ember.ObjectController.extend({
-      actions: {
-        asyncStuff: function(elementName, eventName) {
-          Ember.run.later(this, asycToggleOffCanvas, elementName, eventName, 1000);
-          return false;
-        }
-      }
-    });
-
-    var asycToggleOffCanvas = function (elName, evtName) {
-      if (typeof elName == 'string' && typeof evtName == 'string') {
-        Em.$(elName).trigger(evtName);
-      }
-    };
-  </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/dummy.js"></script>
   </body>
 </html>
