@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+off-canvas-opener, off-canvas-closer {
+  margin: 1em;
+}
+
+.off-canvas-body, .on-canvas-body {
+  margin: 2em;
+  padding: 1em;
+  border-top: 2px dotted #efefef;
+}
+
+.on-canvas-body textarea {
+  height: 300px;
+  width: 95%;
+}
+
+.on-canvas-body h1 {
+  font-size: 1.5em;
+}
+
+.on-canvas-body off-canvas-opener {
+  text-decoration: underline;
+  margin: 1em 0;
+}
+
+.on-canvas-body dt {
+  font-weight: bold;
+  margin: 1em 0 .5em 0;
+}
+
+.on-canvas-body code {
+  color: blue;
+}

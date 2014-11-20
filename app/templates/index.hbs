@@ -1,0 +1,42 @@
+<p>
+  {{#off-canvas-opener inline=true}}
+    Open Off-Canvas Panel
+  {{/off-canvas-opener}}
+</p>
+<h1>Components Included:</h1>
+<p>
+  The application template this demo uses is a group of components:
+  <code>eoc-viewport</code>, <code>on-canvas</code>, <code>off-canvas</code>,
+  <code>off-canvas-opener</code> and <code>off-canvas-closer</code>.
+</p>
+<dl>
+  <dt>eoc-viewport</dt>
+  <dd>
+    Container for the group of components, listens to custom events. When
+    <code>active=true</code> the <code>eoc-viewport</code> element uses the CSS class
+    <code>off-canvas-expanded</code>. Child elements have default CSS to transition the
+    <code>off-canvas</code> from the right into view, pushing the <code>on-canvas</code>
+    element over to the left.
+  </dd>
+  <dt>on-canvas</dt>
+  <dd>
+    Main area that is intended to be visible by default (on screen)
+  </dd>
+  <dt>off-canvas</dt>
+  <dd>
+    Secondary area off-screen (not visible) by default
+  </dd>
+  <dt>off-canvas-opener</dt>
+  <dd>
+    Expands the <code>off-canvas</code> element (show), uses custom event
+    <code>expandOffCanvas</code> and has option for using <code>toggleOffCanvas</code>,
+    <code>useToggle=true</code>. Option <code>inline=true</code> uses a the CSS class 
+    <code>off-canvas-opener-inline</code> instead of <code>off-canvas-opener-default</code>
+  </dd>
+  <dt>off-canvas-closer</dt>
+  <dd>
+    Collapses the <code>off-canvas</code> element (hide), uses custom event 
+    <code>collapseOffCanvas</code>
+  </dd>
+</dl>
+<a href="https://github.com/pixelhandler/ember-off-canvas-components">View Source Github</a>

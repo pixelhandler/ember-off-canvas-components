@@ -1,0 +1,21 @@
+{{#eoc-viewport}}
+{{#on-canvas}}
+  {{#off-canvas-opener useToggle=true}}
+    <i class="fa fa-bars"></i>
+  {{/off-canvas-opener}}
+  <br>
+  <div class="on-canvas-body">
+    {{outlet}}
+  </div>
+{{/on-canvas}}
+
+{{#off-canvas}}
+  {{#off-canvas-closer}}
+    <i class="fa fa-times"></i>
+  {{/off-canvas-closer}}
+  <br>
+  <div class="off-canvas-body">
+    {{outlet off-canvas}}
+  </div>
+{{/off-canvas}}
+{{/eoc-viewport}}
