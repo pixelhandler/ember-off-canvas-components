@@ -3,7 +3,9 @@ var sass = require('node-sass');
 var path = require('path');
 
 module.exports = function (env) {
-  var vendorFile = path.resolve(__dirname, 'vendor/ember-off-canvas-components.css');
+  var config = require('./config/environment')(env);
+  var cssFile = 'vendor/' + config.addonPrefix + '.css';
+  var vendorFile = path.resolve(__dirname, cssFile);
 
   sass.renderFile({
     file: path.resolve(__dirname, 'addon/styles/scss/main.scss'),
