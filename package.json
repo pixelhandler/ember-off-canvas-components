@@ -7,10 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "sass": "sass addon/styles/scss/main.scss vendor/ember-off-canvas.css",
     "start": "ember server",
     "build": "ember build",
-    "test": "ember test"
+    "test": "ember test",
+    "sass": "sass addon/styles/scss/main.scss vendor/ember-off-canvas-components.css"
   },
   "repository": {
     "type": "git",
