@@ -10,6 +10,7 @@ user interface.
 Use this addon in you ember-cli application...
 
     npm install --save-dev pixelhandler/ember-off-canvas-components
+    npm install node-sass --save-dev
 
 ## [View a demo][demo]
 
