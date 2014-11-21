@@ -3,14 +3,24 @@
 A micro library packaged as and Ember CLI Addon - a group of [Ember.js Components] that interact to create an Off-Canvas
 user interface.
 
-[![Build Status](https://travis-ci.org/pixelhandler/ember-off-canvas-components.svg?branch=v0.1.0)](https://travis-ci.org/pixelhandler/ember-off-canvas-components)
+[![Build Status](https://travis-ci.org/pixelhandler/ember-off-canvas-components.svg)](https://travis-ci.org/pixelhandler/ember-off-canvas-components)
+
 
 ## Installation
+
+### As an Ember CLI addon
 
 Use this addon in you ember-cli application...
 
     npm install --save-dev pixelhandler/ember-off-canvas-components
     npm install node-sass --save-dev
+
+### As a Standalone Library
+
+Download a [release](releases).
+
+Copy to your vendor directory and link up the .js and .css files
+
 
 ## [View a demo][demo]
 
@@ -45,12 +55,14 @@ Use this addon in you ember-cli application...
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
+Also see the [packaging][packaging] directory for a non Ember CLI release.
+
 ## Test the addon as a dependency
 
 The dummy app is used for the demo on the gh-pages branch. Test out the
 addon in an ember-cli by copying some of the source code of the dummy app. 
 
-* Test with local clone of this repo using `npm link`
+Test with local clone of this repo using `npm link`
 
     cd ember-off-canvas-components
     npm link
@@ -59,13 +71,13 @@ addon in an ember-cli by copying some of the source code of the dummy app.
     cd test-app
     npm link ember-off-canvas-components
 
-* Or, test with a github repo
+Or, test with a github repo
 
     ember new test-app
     cd test-app
     npm install pixelhandler/ember-off-canvas-components --save-dev
 
-* Copy the dummy app files and run the test-app
+Copy the dummy app files and run the test-app
 
     cp node_modules/ember-off-canvas-components/tests/dummy/app/templates/application.hbs app/templates/application.hbs
     cp node_modules/ember-off-canvas-components/tests/dummy/app/templates/index.hbs app/templates/index.hbs
@@ -73,6 +85,5 @@ addon in an ember-cli by copying some of the source code of the dummy app.
     cp node_modules/ember-off-canvas-components/tests/dummy/app/controllers/index.js app/controllers/index.js
     cp node_modules/ember-off-canvas-components/tests/dummy/app/routes/index.js app/routes/index.js
     cp node_modules/ember-off-canvas-components/tests/dummy/app/styles/app.css app/styles/app.css
-
     ember server
 

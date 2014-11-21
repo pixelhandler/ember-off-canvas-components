@@ -20,15 +20,17 @@ var addonTree = pickFiles('../addon', {srcDir: '/', destDir: name});
 var precompiled = mergeTrees([addonTree, appTree, templateTree]);
 var registrations = registry(pickFiles(precompiled, {srcDir: '/app', destDir: '/'}));
 var bower = pickFiles('../bower_components', {srcDir: '/loader.js', destDir: '/'});
-var jsTree = mergeTrees([precompiled, registrations, bower]);
+var glue = new Funnel('.', { include: [/^glue\.js$/] });
+
+var jsTree = mergeTrees([glue, mergeTrees([precompiled, registrations, bower])]);
 
 var compiled = compileES6(jsTree, {
   wrapInEval: false,
   loaderFile: 'loader.js',
-  inputFiles: ['app/**/*.js'],
+  inputFiles: [ name + '/index.js', 'app/**/*.js'],
   ignoredModules: ['ember', name],
   outputFile: '/' + name + '-' + version + '.js',
-  legacyFilesToAppend: ['registry-output.js']
+  legacyFilesToAppend: ['registry-output.js', 'glue.js']
 });
 compiled = wrap(compiled);
 

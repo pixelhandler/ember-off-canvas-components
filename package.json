@@ -2,18 +2,19 @@
   "name": "ember-off-canvas-components",
   "version": "0.2.0",
   "description": "A micro library of [Ember.js] components that interact to create an Off-Canvas user interface.",
-  "main": "dist/globals/ember-off-canvas-components.js",
+  "main": "index.js",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
   "scripts": {
     "postinstall": "./postinstall.sh",
-    "prepublish": "./postinstall.sh",
+    "prepublish": "./prepublish.sh",
     "start": "ember server",
     "build": "ember build",
     "test": "ember test",
-    "sass": "sass addon/styles/scss/main.scss vendor/ember-off-canvas-components.css"
+    "sass": "node -e \"require('./compile-css.js')()\"",
+    "clean": "rm -fr ./dist ./vendor/*.css*"
   },
   "repository": {
     "type": "git",
