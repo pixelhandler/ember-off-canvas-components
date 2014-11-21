@@ -8,15 +8,15 @@ on-canvas {
   position: relative;
   width: 100%;
   overflow: auto;
-  -webkit-transition-property: "left margin-right";
+  -webkit-transition-property: 'left margin-right';
   -webkit-transition-duration: 500ms;
-  -moz-transition-property: "left margin-right";
+  -moz-transition-property: 'left margin-right';
   -moz-transition-duration: 500ms;
-  -ms-transition-property: "left margin-right";
+  -ms-transition-property: 'left margin-right';
   -ms-transition-duration: 500ms;
-  -o-transition-property: "left margin-right";
+  -o-transition-property: 'left margin-right';
   -o-transition-duration: 500ms;
-  transition-property: "left margin-right";
+  transition-property: 'left margin-right';
   transition-duration: 500ms;
   transition-timing-function: ease-in-out 0s; }
   on-canvas.on-canvas-default {
@@ -32,15 +32,15 @@ off-canvas {
   width: 30em;
   max-width: 100%;
   height: 100%;
-  -webkit-transition-property: "right";
+  -webkit-transition-property: 'right';
   -webkit-transition-duration: 500ms;
-  -moz-transition-property: "right";
+  -moz-transition-property: 'right';
   -moz-transition-duration: 500ms;
-  -ms-transition-property: "right";
+  -ms-transition-property: 'right';
   -ms-transition-duration: 500ms;
-  -o-transition-property: "right";
+  -o-transition-property: 'right';
   -o-transition-duration: 500ms;
-  transition-property: "right";
+  transition-property: 'right';
   transition-duration: 500ms;
   transition-timing-function: ease-in-out 0s;
   overflow: auto;
@@ -66,15 +66,15 @@ off-canvas-closer {
   top: 0;
   right: -30em;
   position: fixed;
-  -webkit-transition-property: "right";
+  -webkit-transition-property: 'right';
   -webkit-transition-duration: 500ms;
-  -moz-transition-property: "right";
+  -moz-transition-property: 'right';
   -moz-transition-duration: 500ms;
-  -ms-transition-property: "right";
+  -ms-transition-property: 'right';
   -ms-transition-duration: 500ms;
-  -o-transition-property: "right";
+  -o-transition-property: 'right';
   -o-transition-duration: 500ms;
-  transition-property: "right";
+  transition-property: 'right';
   transition-duration: 500ms;
   transition-timing-function: ease-in-out 0s; }
   off-canvas-closer:hover {
@@ -85,30 +85,29 @@ off-canvas-closer {
 .off-canvas-expanded on-canvas {
   left: -30em;
   margin-right: 30em;
-  -webkit-transition-property: "left margin-right";
+  -webkit-transition-property: 'left margin-right';
   -webkit-transition-duration: 500ms;
-  -moz-transition-property: "left margin-right";
+  -moz-transition-property: 'left margin-right';
   -moz-transition-duration: 500ms;
-  -ms-transition-property: "left margin-right";
+  -ms-transition-property: 'left margin-right';
   -ms-transition-duration: 500ms;
-  -o-transition-property: "left margin-right";
+  -o-transition-property: 'left margin-right';
   -o-transition-duration: 500ms;
-  transition-property: "left margin-right";
+  transition-property: 'left margin-right';
   transition-duration: 500ms;
   transition-timing-function: ease-in-out 0s; }
 .off-canvas-expanded off-canvas-closer {
   right: 0;
-  -webkit-transition-property: "right";
+  -webkit-transition-property: 'right';
   -webkit-transition-duration: 500ms;
-  -moz-transition-property: "right";
+  -moz-transition-property: 'right';
   -moz-transition-duration: 500ms;
-  -ms-transition-property: "right";
+  -ms-transition-property: 'right';
   -ms-transition-duration: 500ms;
-  -o-transition-property: "right";
+  -o-transition-property: 'right';
   -o-transition-duration: 500ms;
-  transition-property: "right";
+  transition-property: 'right';
   transition-duration: 500ms;
   transition-timing-function: ease-in-out 0s; }
 
-/*# sourceMappingURL=ember-off-canvas.css.map */
-
+/*# sourceMappingURL=ember-off-canvas-components.css.map */
