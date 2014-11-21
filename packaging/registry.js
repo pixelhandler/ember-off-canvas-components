@@ -4,7 +4,7 @@ var shimName = require('../config/environment')().shimName;
 var Writer = require('broccoli-writer');
 var fs = require('fs');
 var path = require('path');
-var RSVP = require('RSVP');
+var RSVP = require('rsvp');
 var walk = require('walk-sync');
 
 var AddonRegistry = function ( inputTree, options ) {
