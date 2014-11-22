@@ -5,6 +5,7 @@ user interface.
 
 [![Build Status](https://travis-ci.org/pixelhandler/ember-off-canvas-components.svg)](https://travis-ci.org/pixelhandler/ember-off-canvas-components)
 
+[Ember.js Components]: http://emberjs.com/guides/components/ 
 
 ## Installation
 
@@ -17,7 +18,9 @@ Use this addon in you ember-cli application...
 
 ### As a Standalone Library
 
-Download a [release](releases).
+Download a [release][releases].
+
+[releases]: https://github.com/pixelhandler/ember-off-canvas-components/releases
 
 Copy to your vendor directory and link up the .js and .css files
 
@@ -27,7 +30,7 @@ Copy to your vendor directory and link up the .js and .css files
 * An off-canvas area is positioned outside of the viewport and slides into view when activated. 
 * (Off-canvas is a UI pattern, and not associated with the html `canvas` element.)
 
-[Ember.js Components]: http://emberjs.com/guides/components/ 
+
 [demo]: http://pixelhandler.github.io/ember-off-canvas-components/
 
 
@@ -55,7 +58,10 @@ Copy to your vendor directory and link up the .js and .css files
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
-Also see the [packaging][packaging] directory for a non Ember CLI release.
+Also see the [packaging] readme file for a non Ember CLI release.
+
+[packaging]: https://github.com/pixelhandler/ember-off-canvas-components/blob/master/packaging/README-packaging.md
+
 
 ## Test the addon as a dependency
 
