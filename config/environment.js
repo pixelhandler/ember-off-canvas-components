@@ -1,8 +1,8 @@
+'use strict';
 /* global module */
 var name = require('../package.json').name;
 
-module.exports = function (environment) {
-  'use strict';
+module.exports = function(environment/* , appConfig */) {
   environment = environment || 'development';
 
   var defaultEnv = {
