@@ -8,7 +8,6 @@
     "test": "tests"
   },
   "scripts": {
-    "prepublish": "./prepublish.sh",
     "start": "ember server",
     "build": "ember build",
     "test": "ember test",
