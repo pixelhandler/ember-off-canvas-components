@@ -3,8 +3,7 @@
 # compiled output
 /dist
 /tmp
-/vendor/ember-off-canvas-components.css
-/vendor/ember-off-canvas-components.css.map
+/vendor
 
 # dependencies
 /node_modules

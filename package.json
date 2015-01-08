@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "ember server",
-    "build": "ember build",
+    "build": "npm run clean; ember build",
     "test": "ember test",
-    "sass": "node -e \"require('./compile-css.js')()\"",
+    "sass": "./node_modules/.bin/node-sass ./addon/styles/scss/main.scss ./vendor/ember-off-canvas-components.css",
     "clean": "rm -fr ./dist ./vendor/*.css*"
   },
   "repository": {

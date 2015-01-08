@@ -1,9 +1,10 @@
 #!/bin/sh
 
 echo "clean vendor directory..."
-rm -fr ./vendor/*
+npm run clean
 
 echo "build and test..."
+npm run sass
 ember build
 ember test
 
