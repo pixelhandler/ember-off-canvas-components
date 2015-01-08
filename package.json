@@ -1,6 +1,6 @@
 {
   "name": "ember-off-canvas-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A micro library of [Ember.js] components that interact to create an Off-Canvas user interface.",
   "main": "index.js",
   "directories": {
