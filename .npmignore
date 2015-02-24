@@ -1,4 +1,15 @@
 bower_components/
+tests/
+
+.bowerrc
+.editorconfig
+.ember-cli
+.travis.yml
+.npmignore
+**/.gitkeep
+bower.json
+Brocfile.js
+testem.json
 node_modules/
 packaging/
 tmp/
