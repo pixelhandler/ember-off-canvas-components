@@ -1,6 +1,6 @@
 {
   "name": "ember-off-canvas-components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A micro library of [Ember.js] components that interact to create an Off-Canvas user interface.",
   "main": "index.js",
   "directories": {
@@ -8,10 +8,11 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ember server",
-    "build": "npm run clean; ember build",
-    "test": "ember test",
-    "sass": "./node_modules/.bin/node-sass ./addon/styles/scss/main.scss ./vendor/ember-off-canvas-components.css",
+    "start": "./node_modules/ember-cli/bin/ember server",
+    "build": "npm run clean; ./node_modules/ember-cli/bin/ember build",
+    "test": "./node_modules/ember-cli/bin/ember test",
+    "css": "./node_modules/.bin/node-sass ./addon/styles/scss/main.scss ./vendor/ember-off-canvas-components.css",
+    "sass": "node -e \"require('./compile-css.js')()\"",
     "clean": "rm -fr ./dist ./vendor/*.css*"
   },
   "repository": {
@@ -23,7 +24,7 @@
   },
   "homepage": "https://github.com/pixelhandler/ember-off-canvas-components",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
   "author": "Bill Heaton",
   "license": "MIT",
@@ -65,5 +66,8 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "node-sass": "^2.0.1"
   }
 }
