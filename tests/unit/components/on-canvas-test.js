@@ -5,13 +5,13 @@ import {
 
 moduleForComponent('on-canvas', 'OnCanvasComponent');
 
-test('it renders element with tagName on-canvas', function() {
-  expect(3);
+test('it renders element with tagName on-canvas', function(assert) {
+  assert.expect(3);
 
   var component = this.subject();
-  equal(component._state, 'preRender');
+  assert.equal(component._state, 'preRender');
 
   this.append();
-  equal(component._state, 'inDOM');
-  equal(component.get('element').tagName, 'on-canvas'.toUpperCase(), 'matches `on-canvas`');
+  assert.equal(component._state, 'inDOM');
+  assert.equal(component.get('element').tagName, 'on-canvas'.toUpperCase(), 'matches `on-canvas`');
 });
