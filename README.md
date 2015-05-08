@@ -13,7 +13,7 @@ user interface.
 
 Use this addon in you ember-cli application...
 
-    npm install --save-dev pixelhandler/ember-off-canvas-components
+    ember install ember-off-canvas-components
 
 ### As a Standalone Library
 
