@@ -40,6 +40,8 @@ Copy to your vendor directory and link up the .js and .css files
     git clone git@github.com:pixelhandler/ember-off-canvas-components.git
     cd ember-off-canvas-components
     npm install
+    bower install
+    npm run sass
 
 ## Running
 
