@@ -1,10 +1,11 @@
 import Ember from 'ember';
+import {module, test} from 'qunit';
 import { initialize } from 'ember-off-canvas-components/initializers/custom-events';
 
 var container, application;
 
 module('CustomEventsInitializer', {
-  setup: function() {
+  beforeEach: function() {
     Ember.run(function() {
       container = new Ember.Container();
       application = Ember.Application.create();
@@ -13,8 +14,8 @@ module('CustomEventsInitializer', {
   }
 });
 
-test('it sets customEvents on the application', function() {
-  expect(1);
+test('it sets customEvents on the application', function(assert) {
+  assert.expect(1);
 
   initialize(container, application);
 
@@ -24,6 +25,6 @@ test('it sets customEvents on the application', function() {
     collapseOffCanvas: "collapseOffCanvas"
   };
 
-  deepEqual(application.customEvents, expected);
+  assert.deepEqual(application.customEvents, expected);
 });
 

@@ -10,9 +10,9 @@
   "scripts": {
     "start": "ember server",
     "build": "npm run clean; ember build",
-    "test": "ember test",
     "sass": "./node_modules/.bin/node-sass ./addon/styles/scss/main.scss ./vendor/ember-off-canvas-components.css",
-    "clean": "rm -fr ./dist ./vendor/*.css*"
+    "clean": "rm -fr ./dist ./vendor/*.css*",
+    "test": "ember try:testall"
   },
   "repository": {
     "type": "git",
@@ -28,32 +28,20 @@
   "author": "Bill Heaton",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "^0.13.3",
-    "broccoli-asset-rev": "^2.0.0",
-    "broccoli-cli": "0.0.1",
-    "broccoli-ember-hbs-template-compiler": "^1.7.0",
-    "broccoli-es3-safe-recast": "^1.0.0",
-    "broccoli-es6-concatenator": "^0.1.11",
-    "broccoli-filter": "^0.1.10",
-    "broccoli-funnel": "^0.1.7",
-    "broccoli-merge-trees": "^0.2.1",
-    "broccoli-static-compiler": "^0.2.1",
-    "broccoli-writer": "^0.1.1",
-    "ember-cli": "0.1.5",
-    "ember-cli-content-security-policy": "0.3.0",
-    "ember-cli-dependency-checker": "0.0.7",
-    "ember-cli-esnext": "0.1.1",
-    "ember-cli-htmlbars": "^0.6.0",
+    "broccoli-asset-rev": "^2.0.2",
+    "ember-cli": "0.2.3",
+    "ember-cli-app-version": "0.3.3",
+    "ember-cli-content-security-policy": "0.4.0",
+    "ember-cli-dependency-checker": "0.0.8",
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-inject-live-reload": "^1.3.0",
-    "ember-cli-qunit": "0.1.2",
-    "ember-data": "1.0.0-beta.12",
-    "ember-export-application-global": "^1.0.0",
-    "express": "^4.8.5",
-    "glob": "^4.0.5",
-    "node-sass": "^2.0.0-beta",
-    "rsvp": "^3.0.14",
-    "walk-sync": "^0.1.3"
+    "ember-cli-qunit": "0.3.10",
+    "ember-cli-uglify": "1.0.1",
+    "ember-data": "1.0.0-beta.16.1",
+    "ember-export-application-global": "^1.0.2",
+    "ember-disable-prototype-extensions": "^1.0.0",
+    "ember-try": "0.0.4",
+    "node-sass": "^2.0.0-beta"
   },
   "keywords": [
     "ember-addon",
@@ -61,6 +49,10 @@
     "components",
     "off-canvas"
   ],
+  "dependencies": {
+    "ember-cli-htmlbars": "0.7.4",
+    "ember-cli-babel": "^5.0.0"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   }

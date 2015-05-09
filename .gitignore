@@ -3,7 +3,7 @@
 # compiled output
 /dist
 /tmp
-/vendor
+/vendor/ember-off-canvas-components.css
 
 # dependencies
 /node_modules
@@ -16,4 +16,3 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
-.DS_Store
