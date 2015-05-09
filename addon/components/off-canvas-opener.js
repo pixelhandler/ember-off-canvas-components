@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 /**
-  To use this component in your app, add this to a template:
+  To use this component in your app, add this to a template, inside the eoc-viewport:
 
   ```handlebars
-  {{#off-canvas-opener}}
+  {{#off-canvas-opener target=eocViewport}}
     <i class="fa fa-bars"></i>
   {{/off-canvas-opener}}
   ```
@@ -27,14 +27,16 @@ export default Ember.Component.extend({
 
   useToggle: false,
 
-  click: function (evt) {
+  click: function () {
     var eventName;
     if (this.get('useToggle')) {
       eventName = 'toggleOffCanvas';
     } else {
       eventName = 'expandOffCanvas';
     }
-    Ember.$(evt.target).trigger(eventName);
+    this.get('target').send(eventName);
     return false;
-  }
+  },
+
+  target: null
 });

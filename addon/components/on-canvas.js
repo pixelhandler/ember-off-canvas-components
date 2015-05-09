@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 /**
-  To use this component in your app, add this to a template:
+  To use this component in your app, add this to a template, inside the eoc-viewport:
 
   ```handlebars
-  {{#on-canvas}}
-    {{#off-canvas-opener}}
+  {{#on-canvas target=eocViewport}}
+    {{#off-canvas-opener target=eocViewport}}
       <i class="fa fa-bars"></i>
     {{/off-canvas-opener}}
     <div class="on-canvas-body">
@@ -27,6 +27,8 @@ export default Ember.Component.extend({
   */
   tagName: 'on-canvas',
 
-  classNames: ['on-canvas-default']
+  classNames: ['on-canvas-default'],
+
+  target: null
 });
 

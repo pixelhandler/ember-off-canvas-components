@@ -2,15 +2,16 @@ import Ember from 'ember';
 
 /**
   To use this component in your app, add this to a template:
+
   ```handlebars
   {{#eoc-viewport}}
-    {{#on-canvas}}
-      {{#off-canvas-opener}}
+    {{#on-canvas targetObject=this}}
+      {{#off-canvas-opener targetObject=targetObject}}
         <i class="fa fa-bars"></i>
       {{/off-canvas-opener}}
     {{/on-canvas}}
-    {{#off-canvas}}
-      {{#off-canvas-closer}}
+    {{#off-canvas targetObject=this}}
+      {{#off-canvas-closer targetObject=targetObject}}
         <i class="fa fa-times"></i>
       {{/off-canvas-closer}}
     {{/off-canvas}}
@@ -32,17 +33,17 @@ export default Ember.Component.extend({
 
   active: false,
 
-  // Custom events
+  actions: {
+    toggleOffCanvas: function () {
+      this.toggleProperty('active');
+    },
 
-  toggleOffCanvas: function () {
-    this.toggleProperty('active');
-  },
+    expandOffCanvas: function () {
+      this.set('active', true);
+    },
 
-  expandOffCanvas: function () {
-    this.set('active', true);
-  },
-
-  collapseOffCanvas: function () {
-    this.set('active', false);
+    collapseOffCanvas: function () {
+      this.set('active', false);
+    }
   }
 });

@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 /**
-  To use this component in your app, add this to a template:
+  To use this component in your app, add this to a template, inside the eoc-viewport:
 
   ```handlebars
-  {{#off-canvas-closer}}
+  {{#off-canvas-closer target=eocViewport}}
     <i class="fa fa-times"></i>
   {{/off-canvas-closer}}
   ```
@@ -23,9 +23,11 @@ export default Ember.Component.extend({
 
   classNames: ['off-canvas-opener-closer'],
 
-  click: function (evt) {
-    Ember.$(evt.target).trigger('collapseOffCanvas');
+  click: function () {
+    this.get('target').send('collapseOffCanvas');
     return false;
-  }
+  },
+
+  target: null
 });
 
