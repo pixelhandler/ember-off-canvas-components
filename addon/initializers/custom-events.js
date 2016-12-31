@@ -13,5 +13,5 @@ export function initialize(container, application) {
 
 export default {
   name: 'ember-off-canvas-components/custom-events',
-  initialize: Ember.K
+  initialize() {}
 };
